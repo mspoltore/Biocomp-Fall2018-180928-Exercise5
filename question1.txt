@@ -1,0 +1,2 @@
+cat wages.csv | cut -d , -f  1,2 | head -n 5 | sort
+
