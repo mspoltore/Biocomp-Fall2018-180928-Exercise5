@@ -19,3 +19,9 @@ cat $1 | sort -r -n -k 4 -t , | head -n 1
 echo "Lowest Earner"
 cat $1 | sort -n -k 4 -t , | head -n 2
 
+# This line should sort the file by highest earners, , head returns the top ten 
+# earners, grep female returns only the female lines and wc -l tells you how many 
+# females are in top ten earners
+
+echo "Number of Women in Top 10 of Wages"
+cat wages.csv | sort -r -n -k 4 -t , | head -n 10 | grep female | wc -l
