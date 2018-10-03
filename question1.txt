@@ -1,2 +1,2 @@
-cat wages.csv | cut -d , -f  1,2 | head -n 5 | sort
+cat wages.csv | head -n 5 | cut -d , -f 1,2 | tr "," " " | sort | uniq
 
